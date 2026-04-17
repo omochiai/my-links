@@ -20,7 +20,6 @@
    おもち LP — Main Stylesheet v2 (GitHub Pages)
    ================================================ */
 
-/* ---------- Reset & Base ---------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -194,7 +193,6 @@ img { max-width: 100%; height: auto; }
 }
 
 .hero-title-accent { color: var(--pink-light); }
-
 .hero-title-main { display: block; margin-top: 6px; }
 
 .hero-title-sub {
@@ -397,7 +395,6 @@ img { max-width: 100%; height: auto; }
   font-size: 1rem;
 }
 
-/* ---- Content Cards ---- */
 .content-card {
   position: relative;
   background: var(--surface);
@@ -905,7 +902,6 @@ img { max-width: 100%; height: auto; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 
-/* JS無効時のフォールバック */
 .no-js .fade-up {
   opacity: 1;
   transform: none;
@@ -982,16 +978,14 @@ img { max-width: 100%; height: auto; }
     </div>
 
     <div class="hero-inner container">
-      <!-- Profile -->
       <div class="hero-profile fade-up">
-        <img src="images/omochi_icon.jpg" alt="おもち" class="hero-avatar">
+        <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/IMG_20250408_205328_454.webp" alt="おもち" class="hero-avatar">
         <div class="hero-profile-text">
           <span class="hero-name">おもち</span>
           <span class="hero-role">占い × TikTok × AI クリエイター</span>
         </div>
       </div>
 
-      <!-- Main Copy -->
       <div class="hero-copy fade-up delay-1">
         <div class="hero-eyebrow">
           <span class="eyebrow-line"></span>
@@ -1012,7 +1006,6 @@ img { max-width: 100%; height: auto; }
         </p>
       </div>
 
-      <!-- Stats -->
       <div class="hero-stats fade-up delay-2">
         <div class="hstat">
           <span class="hstat-num">33<small>万</small></span>
@@ -1168,7 +1161,6 @@ img { max-width: 100%; height: auto; }
               <span>AIを使いこなすことで<strong>コスパ最高</strong>の収益化を実現する戦略</span>
             </div>
           </div>
-          <!-- 購入者特典 -->
           <div class="bonus-box">
             <div class="bonus-header">
               <i class="fa-solid fa-gift"></i>
@@ -1216,7 +1208,6 @@ img { max-width: 100%; height: auto; }
           <h3 class="card-title">占い講座（2期生）</h3>
           <p class="card-tagline">リサーチ不要・省エネ活動で初月33万→2ヶ月目112万→3ヶ月目123万の「中身」を教える講座</p>
 
-          <!-- 実績バッジ -->
           <div class="uranai-results">
             <div class="uresult">
               <span class="uresult-month">初月</span>
@@ -1267,7 +1258,7 @@ img { max-width: 100%; height: auto; }
     <div class="container">
       <div class="strategy-inner fade-up">
         <div class="strategy-icon">
-          <img src="images/omochi_icon.jpg" alt="おもち" class="strategy-avatar">
+          <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/IMG_20250408_205328_454.webp" alt="おもち" class="strategy-avatar">
         </div>
         <div class="strategy-text">
           <h2 class="strategy-title">
@@ -1330,7 +1321,7 @@ img { max-width: 100%; height: auto; }
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="images/omochi_icon.jpg" alt="おもち" class="footer-avatar">
+          <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/IMG_20250408_205328_454.webp" alt="おもち" class="footer-avatar">
           <span class="footer-name">おもち</span>
         </div>
         <p class="footer-note">
@@ -1342,12 +1333,11 @@ img { max-width: 100%; height: auto; }
     </div>
   </footer>
 
-  <!-- ========== JavaScript (Inline) ========== -->
+  <!-- ========== JavaScript ========== -->
   <script>
   (function () {
     'use strict';
 
-    /* ---- Scroll Animation (IntersectionObserver) ---- */
     var fadeEls = document.querySelectorAll('.fade-up');
 
     if ('IntersectionObserver' in window) {
@@ -1367,13 +1357,11 @@ img { max-width: 100%; height: auto; }
         observer.observe(el);
       });
     } else {
-      /* Fallback: show all immediately */
       fadeEls.forEach(function (el) {
         el.classList.add('visible');
       });
     }
 
-    /* ---- Smooth scroll for anchor links ---- */
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
         var target = document.querySelector(this.getAttribute('href'));
