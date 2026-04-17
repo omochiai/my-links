@@ -637,26 +637,6 @@ img { max-width: 100%; height: auto; }
   text-align: center;
 }
 
-.uresult-now {
-  border-color: rgba(255,107,157,0.4);
-  background: rgba(255,107,157,0.08);
-  position: relative;
-}
-.uresult-now::after {
-  content: 'NOW';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--grad-main);
-  color: #fff;
-  font-size: 0.6rem;
-  font-weight: 800;
-  padding: 2px 8px;
-  border-radius: 100px;
-  letter-spacing: 0.1em;
-}
-
 .uresult-month {
   font-size: 0.68rem;
   color: var(--text-muted);
@@ -674,12 +654,6 @@ img { max-width: 100%; height: auto; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.uresult-now .uresult-num {
-  background: var(--grad-main);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 .uresult-num small { font-size: 1rem; }
 
 .uresult-label {
@@ -693,6 +667,15 @@ img { max-width: 100%; height: auto; }
   font-size: 0.8rem;
   opacity: 0.5;
   flex-shrink: 0;
+}
+
+.uranai-proof {
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--pink-light);
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
 }
 
 .strategy-section {
@@ -1169,13 +1152,13 @@ img { max-width: 100%; height: auto; }
       <div class="content-card coming-soon-card fade-up">
         <div class="card-badge coming">準備中</div>
         <div class="card-thumb card-thumb-tall">
-          <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/uranai_koza.png" alt="占い講座 3期生" loading="lazy">
+          <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/uranai_koza.png" alt="占い講座" loading="lazy">
         </div>
         <div class="card-body">
           <div class="card-platform">
             <i class="fa-solid fa-star-and-crescent"></i> 占い × SNS 運用
           </div>
-          <h3 class="card-title">占い講座（2期生）</h3>
+          <h3 class="card-title">占い講座</h3>
           <p class="card-tagline">リサーチ不要・省エネ活動で初月33万→2ヶ月目112万→3ヶ月目123万の「中身」を教える講座</p>
 
           <div class="uranai-results">
@@ -1191,20 +1174,20 @@ img { max-width: 100%; height: auto; }
               <span class="uresult-label">1日1〜2投稿の省エネ</span>
             </div>
             <div class="uresult-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-            <div class="uresult uresult-now">
+            <div class="uresult">
               <span class="uresult-month">3ヶ月目</span>
               <span class="uresult-num">123<small>万</small></span>
+              <span class="uresult-label">省エネ活動で達成</span>
             </div>
           </div>
+
+          <p class="uranai-proof">2ヶ月連続100万超え——これは、まぐれでは出せない数字。</p>
 
           <div class="card-message">
             <div class="message-box">
               <i class="fa-solid fa-quote-left quote-icon"></i>
               <p>
-                表面的な真似をするアカウントが増えてきているけど、<br>
-                結局、<strong>どういう運用をしているか？の「中身」</strong>を<br>
-                知らない人が真似をしても通用しない。<br>
-                これを実感している。
+                表面的な真似をするアカウントが増えてきているけど、結局、<strong>どういう運用をしているか？の「中身」</strong>を知らない人が真似をしても通用しない。これを実感している。
               </p>
               <p class="message-sub">
                 本気で学びたい、本気で稼ぎたい人のみ応募してほしい。<br>
