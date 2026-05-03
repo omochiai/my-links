@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" class="no-js">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,6 @@
   <meta property="og:description" content="占いアカウント初月33万→2ヶ月目112万→3ヶ月目123万達成の全手法">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍡</text></svg>">
-  <script>document.documentElement.classList.remove('no-js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -92,17 +91,11 @@ img { max-width: 100%; height: auto; }
   border-radius: 50%;
   filter: blur(90px);
   opacity: 0.3;
-  animation: floatShape 9s ease-in-out infinite;
 }
-.shape-1 { width: 600px; height: 600px; background: radial-gradient(circle, #9b59b6, transparent); top: -200px; left: -150px; animation-delay: 0s; }
-.shape-2 { width: 500px; height: 500px; background: radial-gradient(circle, #ff6b9d, transparent); bottom: -150px; right: -100px; animation-delay: 2s; }
-.shape-3 { width: 350px; height: 350px; background: radial-gradient(circle, #6c63ff, transparent); top: 35%; left: 55%; animation-delay: 4s; }
-.shape-4 { width: 250px; height: 250px; background: radial-gradient(circle, #00c9c8, transparent); top: 18%; left: 8%; animation-delay: 1s; }
-
-@keyframes floatShape {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50%       { transform: translateY(-28px) scale(1.05); }
-}
+.shape-1 { width: 600px; height: 600px; background: radial-gradient(circle, #9b59b6, transparent); top: -200px; left: -150px; }
+.shape-2 { width: 500px; height: 500px; background: radial-gradient(circle, #ff6b9d, transparent); bottom: -150px; right: -100px; }
+.shape-3 { width: 350px; height: 350px; background: radial-gradient(circle, #6c63ff, transparent); top: 35%; left: 55%; }
+.shape-4 { width: 250px; height: 250px; background: radial-gradient(circle, #00c9c8, transparent); top: 18%; left: 8%; }
 
 .hero-inner {
   position: relative;
@@ -263,11 +256,6 @@ img { max-width: 100%; height: auto; }
   padding: 15px 40px;
   border-radius: 100px;
   box-shadow: 0 8px 32px rgba(255,107,157,0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.hero-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 44px rgba(255,107,157,0.55);
 }
 
 .hero-scroll-hint {
@@ -283,11 +271,6 @@ img { max-width: 100%; height: auto; }
   height: 48px;
   background: linear-gradient(to bottom, rgba(255,107,157,0.8), transparent);
   margin: 0 auto;
-  animation: scrollLine 2s ease-in-out infinite;
-}
-@keyframes scrollLine {
-  0%   { opacity: 1; transform: scaleY(1); transform-origin: top; }
-  100% { opacity: 0; transform: scaleY(0.1); transform-origin: top; }
 }
 
 .why-section {
@@ -390,11 +373,6 @@ img { max-width: 100%; height: auto; }
   margin-bottom: 36px;
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.content-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 36px 80px rgba(0,0,0,0.5);
 }
 
 .content-card.featured { border-color: rgba(255,107,157,0.25); }
@@ -434,9 +412,7 @@ img { max-width: 100%; height: auto; }
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
 }
-.content-card:hover .card-thumb img { transform: scale(1.03); }
 .card-thumb-tall { max-height: 300px; }
 
 .card-body { padding: 30px 34px 34px; }
@@ -501,16 +477,12 @@ img { max-width: 100%; height: auto; }
   border-radius: 100px;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
-.btn:hover { transform: translateY(-2px); opacity: 0.9; }
 
 .btn-primary  { background: var(--grad-main); color: #fff; box-shadow: 0 6px 24px rgba(255,107,157,0.4); }
-.btn-primary:hover { box-shadow: 0 12px 36px rgba(255,107,157,0.55); }
 .btn-secondary { background: linear-gradient(135deg, #6c63ff, #00c9c8); color: #fff; box-shadow: 0 6px 24px rgba(108,99,255,0.35); }
 .btn-ai       { background: linear-gradient(135deg, #9b59b6, #6c63ff); color: #fff; box-shadow: 0 6px 24px rgba(155,89,182,0.35); }
 .btn-outline  { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.28); }
-.btn-outline:hover { background: rgba(255,255,255,0.06); }
 .btn-lg       { padding: 16px 38px; font-size: 1.05rem; }
 
 .card-message { margin-bottom: 20px; }
@@ -845,24 +817,6 @@ img { max-width: 100%; height: auto; }
   color: #44445a;
 }
 
-.fade-up {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-up.visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-
-.no-js .fade-up {
-  opacity: 1;
-  transform: none;
-}
-
 @media (max-width: 700px) {
   .hero-stats {
     border-radius: 20px;
@@ -931,7 +885,7 @@ img { max-width: 100%; height: auto; }
     </div>
 
     <div class="hero-inner container">
-      <div class="hero-profile fade-up">
+      <div class="hero-profile">
         <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/IMG_20250408_205328_454.webp" alt="おもち" class="hero-avatar">
         <div class="hero-profile-text">
           <span class="hero-name">おもち</span>
@@ -939,7 +893,7 @@ img { max-width: 100%; height: auto; }
         </div>
       </div>
 
-      <div class="hero-copy fade-up delay-1">
+      <div class="hero-copy">
         <div class="hero-eyebrow">
           <span class="eyebrow-line"></span>
           なぜ、何をやっても稼げるのか？
@@ -959,7 +913,7 @@ img { max-width: 100%; height: auto; }
         </p>
       </div>
 
-      <div class="hero-stats fade-up delay-2">
+      <div class="hero-stats">
         <div class="hstat">
           <span class="hstat-num">33<small>万</small></span>
           <span class="hstat-label">占いアカ初月収益</span>
@@ -976,7 +930,7 @@ img { max-width: 100%; height: auto; }
         </div>
       </div>
 
-      <a href="#contents" class="hero-btn fade-up delay-3">
+      <a href="#contents" class="hero-btn">
         コンテンツを見る <i class="fa-solid fa-chevron-down"></i>
       </a>
     </div>
@@ -989,7 +943,7 @@ img { max-width: 100%; height: auto; }
   <!-- ========== WHY SECTION ========== -->
   <section class="why-section">
     <div class="container">
-      <div class="why-box fade-up">
+      <div class="why-box">
         <div class="why-icon"><i class="fa-solid fa-lightbulb"></i></div>
         <div class="why-text">
           <h2 class="why-title">なぜ、何をやっても稼げるのか？</h2>
@@ -1008,14 +962,14 @@ img { max-width: 100%; height: auto; }
   <!-- ========== CONTENTS ========== -->
   <section class="contents-section" id="contents">
     <div class="container">
-      <div class="section-header fade-up">
+      <div class="section-header">
         <span class="section-tag">CONTENTS</span>
         <h2 class="section-title">おすすめコンテンツ</h2>
         <p class="section-desc">おもちが実践・推薦する厳選コンテンツ</p>
       </div>
 
       <!-- ===== CARD 1: SELLLESS ===== -->
-      <div class="content-card featured fade-up">
+      <div class="content-card featured">
         <div class="card-badge own">自作コンテンツ</div>
         <div class="card-thumb">
           <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/sellless.png" alt="SELLLESS サムネイル" loading="lazy">
@@ -1053,7 +1007,7 @@ img { max-width: 100%; height: auto; }
       </div>
 
       <!-- ===== CARD 2: 自動投稿ツール ===== -->
-      <div class="content-card fade-up">
+      <div class="content-card">
         <div class="card-badge pr">PR</div>
         <div class="card-body card-body-full">
           <div class="card-platform">
@@ -1088,7 +1042,7 @@ img { max-width: 100%; height: auto; }
       </div>
 
       <!-- ===== CARD 3: AITHRAISE ===== -->
-      <div class="content-card fade-up">
+      <div class="content-card">
         <div class="card-badge pr">PR</div>
         <div class="card-body card-body-full">
           <div class="card-platform">
@@ -1149,7 +1103,7 @@ img { max-width: 100%; height: auto; }
       </div>
 
       <!-- ===== CARD 4: 占い講座 ===== -->
-      <div class="content-card coming-soon-card fade-up">
+      <div class="content-card coming-soon-card">
         <div class="card-badge coming">準備中</div>
         <div class="card-thumb card-thumb-tall">
           <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/uranai_koza.png" alt="占い講座" loading="lazy">
@@ -1209,7 +1163,7 @@ img { max-width: 100%; height: auto; }
   <!-- ========== STRATEGY SECTION ========== -->
   <section class="strategy-section">
     <div class="container">
-      <div class="strategy-inner fade-up">
+      <div class="strategy-inner">
         <div class="strategy-icon">
           <img src="https://raw.githubusercontent.com/omochiai/my-links/main/assets/IMG_20250408_205328_454.webp" alt="おもち" class="strategy-avatar">
         </div>
@@ -1247,7 +1201,7 @@ img { max-width: 100%; height: auto; }
   <!-- ========== CTA BANNER ========== -->
   <section class="cta-section">
     <div class="container">
-      <div class="cta-box fade-up">
+      <div class="cta-box">
         <div class="cta-bg-deco">🍡</div>
         <h2 class="cta-title">
           本気で稼ぎたいなら、<br>
@@ -1289,31 +1243,6 @@ img { max-width: 100%; height: auto; }
   <script>
   (function () {
     'use strict';
-
-    var fadeEls = document.querySelectorAll('.fade-up');
-
-    if ('IntersectionObserver' in window) {
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
-      });
-
-      fadeEls.forEach(function (el) {
-        observer.observe(el);
-      });
-    } else {
-      fadeEls.forEach(function (el) {
-        el.classList.add('visible');
-      });
-    }
-
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
         var target = document.querySelector(this.getAttribute('href'));
